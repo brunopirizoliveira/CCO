@@ -37,7 +37,7 @@ class DbAdmin{
 
 			case 'oracle':
 
-				$this->conn = ocilogon('globus', 'hsoracle', 'GLOBUSSERVER');
+				$this->conn = ocilogon($user, $pass, $host);
 
 			break;
 
