@@ -1,0 +1,444 @@
+<!-- <aside></aside>  -->
+
+<div id="wrapper">
+
+  <form id="frmFrota"> <!-- ou  method="post" action="../controller/executa_cadastro_frota.php" não assincrono -->
+
+	<fieldset id="dadosFrota">
+      <legend><h4>Dados do Frota <div class="situacao-{in}ativo" /></h4></legend>
+      <div class="row">
+        <div class="span3">
+          <label for="frtPrefixo">Frota</label>
+          <input type="text" id="frtPrefixo" name="frtPrefixo" value="{frota}" readonly />
+
+        </div>
+        <div class="span3">
+          <label for="frtEmpresa">Empresa</label>
+          <input type="text" id="frtEmpresa" name="frtEmpresa" value="{empresa}" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtFilial">Filial</label>
+          <input type="text" id="frtFilial" name="frtFilial" value="{filial}" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtGaragem">Garagem</label>
+          <input type="text" id="frtGaragem" name="frtGaragem" value="{garagem}" readonly />
+        </div>
+      </div>
+
+      <div class="row">  
+        <div class="span3">
+          <label for="frtMarca">Marca</label>
+          <input type="text" id="frtMarca" name="frtMarca" value="{marca}" readonly />
+        </div>
+
+        <div class="span3">
+          <label for="frtOperacao">Operacao</label>
+          <input type="text" id="frtOperacao" name="frtOperacao" value="{operacao}" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtPlaca">Placa</label>
+          <input type="text" id="frtPlaca" name="frtPlaca" value="{placa}" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtTipo">Tipo</label>
+          <input type="text" id="frtTipo" name="frtTipo" value="{tpfrota}" readonly />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset id="dadosEquipamento">
+		<legend><h4>Dados Equipamento</h4></legend>
+		<input type="hidden" id="targetEquip" name="targetEquip">
+		<table class="equip">
+			<tr class="equip-head grey">
+				<td colspan="5">
+					<!-- START BLOCK : adicionar -->
+					<div class="btn-group pull-right" role="group" aria-label="...">
+						<button type="button" class="btn btn-mini btn-default" id="edit_addEquip" onClick="editNewEquip({row},1)">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<!-- END BLOCK : adicionar -->
+				</td>
+			</tr>
+			<tr class="grey">
+				<td>
+				
+				</td>
+					
+				<td>
+					<strong>Medição</strong>
+				</td>
+				
+				<td>
+					<strong>Fornecedor</strong> 
+				</td>
+				
+				<td>
+					<strong>Equipamento</strong>
+				</td>
+				
+				<td>
+					<strong>Data de Instalação</strong>
+				</td>
+				
+			</tr>
+		<!-- START BLOCK : DadosEquipamento -->
+		
+			<tr id="row_{row}">
+			
+				<td>
+					<button type="button" class="btn btn-mini btn-default" id="editDelEquip{row}">
+						<span class="glyphicon glyphicon-remove-sign"></span>
+					</button>
+				</td>
+			
+				<td id="data_{row}_1">{medicao}</td>
+				
+				<td id="data_{row}_2">{fornecedor}</td>
+				
+				<td id="data_{row}_3">{numequipamento}</td>
+				
+				<td id="data_{row}_4">{instalacao}</td>
+				
+				<!--<td>
+					<button type="button" class="btn btn-mini btn-default" id="edita_equip" onClick="editEquip({row}, 1)">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+				</td>-->
+				
+			</tr>
+			
+			<input type="hidden" id="idTecnologia{row}" value="{idtecnologia}">
+			<input type="hidden" id="idTecnologiaOrg{row}" value="{idtecnologiaorg}">
+		
+		<!-- END BLOCK : DadosEquipamento -->
+		
+			<tr class="equip-bottom">
+				<td colspan="5">
+				</td>
+			</tr>
+		
+		</table>
+
+		<!-- ADD EQUIP 1 -->
+		
+		<div class="row" id="edtEquip1">
+				<div>
+
+					<div class="span3">
+					  <label for="frtMediEquipamento">Medição</label>
+					  <select name="frtMediEquipamento[]" id="frtMediEquipamento1">
+						<option>Selecione</option>
+						<option value="1">Telemetria</option>
+						<option value="2">Rastreador</option>
+						<option value="3">Ambos</option>
+					  </select>
+					</div>
+
+					<div class="span3">
+					  <label for="frtFornEquipamento">Fornecedor</label>          
+					  <select name="frtFornEquipamento[]" id="frtFornEquipamento1">
+						<option value="">Selecione</option>
+						<option value="1">FM300</option>
+						<option value="2">Sascar</option>
+						<option value="3">Seva</option>
+						<option value="4">Sighra</option>
+						<option value="5">Telemetrik</option>
+					  </select>
+					</div> 
+
+					<div class="span3">
+					  <label for="frtSelEquipamento1">Selecione o Equipamento</label>                    
+						<input type="text" placeholder="Selecione o equipamento" id="frtSelEquipamento1" name="frtSelEquipamento1" />            
+						<input type="hidden" name="frtEquipIDTecnologia1" id="frtEquipIDTecnologia1" value="">            
+					</div>
+
+					<div class="span3">
+					  <label for="frtDtEquipamento">Data de Instalação</label>
+					  <input type="text" name="frtDtEquipamento[]" id="frtDtEquipamento1" />
+					</div>        
+						
+				</div>
+				<div>
+					<div class="span12">
+						<div class="btn-group pull-right" role="group" aria-label="...">
+							<button type="button" class="btn btn-mini btn-default" id="#" onClick="editNewEquip(1,0)">
+								<span class="glyphicon glyphicon-remove"></span>Cancelar
+							</button>
+							<button type="button" class="btn btn-mini btn-default" id="confirmaEdtEquip1">
+								<span class="glyphicon glyphicon-ok"></span> Confirmar alteração
+							</button>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<!-- FIM EQUIP 1 -->
+		<!-- ADD EQUIP 2 -->
+		
+		<div class="row" id="edtEquip2">
+				<div>
+
+					<div class="span3">
+					  <label for="frtMediEquipamento">Medição</label>
+					  <select name="frtMediEquipamento[]" id="frtMediEquipamento2">
+						<option>Selecione</option>
+						<option value="1">Telemetria</option>
+						<option value="2">Rastreador</option>
+						<option value="3">Ambos</option>
+					  </select>
+					</div>
+
+					<div class="span3">
+					  <label for="frtFornEquipamento">Fornecedor</label>          
+					  <select name="frtFornEquipamento[]" id="frtFornEquipamento2">
+						<option value="">Selecione</option>
+						<option value="1">FM300</option>
+						<option value="2">Sascar</option>
+						<option value="3">Seva</option>
+						<option value="4">Sighra</option>
+						<option value="5">Telemetrik</option>
+					  </select>
+					</div> 
+
+					<div class="span3">
+					  <label for="frtSelEquipamento2">Selecione o Equipamento</label>                    
+						<input type="text" placeholder="Selecione o equipamento" id="frtSelEquipamento2" name="frtSelEquipamento2" />            
+						<input type="hidden" name="frtEquipIDTecnologia2" id="frtEquipIDTecnologia2" value="">            
+					</div>
+
+					<div class="span3">
+					  <label for="frtDtEquipamento">Data de Instalação</label>
+					  <input type="text" name="frtDtEquipamento[]" id="frtDtEquipamento2" />
+					</div>        
+					
+				</div>
+				<div>
+					<div class="span12">
+						<div class="btn-group pull-right" role="group" aria-label="...">
+							<button type="button" class="btn btn-mini btn-default" id="#" onClick="editNewEquip(2,0)">
+								<span class="glyphicon glyphicon-remove"></span>Cancelar
+							</button>
+							<button type="button" class="btn btn-mini btn-default" id="confirmaEdtEquip2">
+								<span class="glyphicon glyphicon-ok"></span> Confirmar alteração
+							</button>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<!-- FIM EQUIP 2 -->
+		<!-- ADD EQUIP 3 -->
+		
+		<div class="row" id="edtEquip3">
+				<div>
+
+					<div class="span3">
+					  <label for="frtMediEquipamento">Medição</label>
+					  <select name="frtMediEquipamento[]" id="frtMediEquipamento3">
+						<option>Selecione</option>
+						<option value="1">Telemetria</option>
+						<option value="2">Rastreador</option>
+						<option value="3">Ambos</option>
+					  </select>
+					</div>
+
+					<div class="span3">
+					  <label for="frtFornEquipamento">Fornecedor</label>          
+					  <select name="frtFornEquipamento[]" id="frtFornEquipamento3">
+						<option value="">Selecione</option>
+						<option value="1">FM300</option>
+						<option value="2">Sascar</option>
+						<option value="3">Seva</option>
+						<option value="4">Sighra</option>
+						<option value="5">Telemetrik</option>
+					  </select>
+					</div> 
+
+					<div class="span3">
+					  <label for="frtSelEquipamento3">Selecione o Equipamento</label>                    
+						<input type="text" placeholder="Selecione o equipamento" id="frtSelEquipamento3" name="frtSelEquipamento3" />            
+						<input type="hidden" name="frtEquipIDTecnologia3" id="frtEquipIDTecnologia3" value="">            
+					</div>
+
+					<div class="span3">
+					  <label for="frtDtEquipamento">Data de Instalação</label>
+					  <input type="text" name="frtDtEquipamento[]" id="frtDtEquipamento3" />
+					</div>        
+						
+				</div>
+				<div>
+					<div class="span12">
+						<div class="btn-group pull-right" role="group" aria-label="...">
+							<button type="button" class="btn btn-mini btn-default" id="#" onClick="editNewEquip(3,0)">
+								<span class="glyphicon glyphicon-remove"></span>Cancelar
+							</button>
+							<button type="button" class="btn btn-mini btn-default" id="confirmaEdtEquip3">
+								<span class="glyphicon glyphicon-ok"></span> Confirmar alteração
+							</button>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<!-- FIM EQUIP 3 -->
+
+	</fieldset>
+
+    <fieldset id="dadosContrato">
+      <legend><h4>Dados de Acesso</h4></legend>
+      <!-- <legend><h4>Dados de Acesso / Contrato</h4></legend> -->
+      <div class="row">
+        <div class="span3">
+          <label for="frtProprietario">Proprietario</label>
+          <input type="text" name="frtProprietario" id="frtProprietario" value="{proprietario}" />
+		  <input type="hidden" name="frtProprietarioOld" id="frtProprietarioOld" value="{proprietario}" />
+        </div>
+        <div class="span3">
+          <label for="frtLogin">Login</label>
+          <input type="text" name="frtLogin" id="frtLogin" value="{login}" />
+		  <input type="hidden" name="frtLoginOld" id="frtLoginOld" value="{login}" />
+        </div>
+        <div class="span3">
+          <label for="frtSenha">Senha</label>
+          <input type="text" name="frtSenha" id="frtSenha" value="{senha}" />
+		  <input type="hidden" name="frtSenhaOld" id="frtSenhaOld" value="{senha}" />
+        </div>
+        <div class="span3">
+        	<label for="temContrato">Tem Contrato</label>
+        	<td><input type="radio" id="temContrato" name="temContrato" value="S" {sim} required>S</td>
+        	<td><input type="radio" id="temContrato" name="temContrato" value="N" {nao} required>N</td>
+        </div>
+        <!-- <div class="span3">
+          <label for="frtContrComodato">Contrato Comodato</label>
+          <input type="file" name="frtContrComodato" id="frtContrComodato" />
+        </div> -->
+      </div>
+    </fieldset>
+
+    <!-- <fieldset id="dadosStFrota">
+      <legend><h4>Situação Frota</h4></legend>
+      <div class="row">
+        <div class="span6">
+          <input type="radio" name="frtSituacao" id="frtSituacao" value="ativo"> Ativo
+          <input type="radio" name="frtSituacao" id="frtSituacao" value="inativo"> Inativo
+        </div>
+      </div>
+    </fieldset> -->
+
+    <div class="row">
+      <div class="span1">
+        <button type="button" name="salvarFrota" id="salvarFrota" value="Salvar">Salvar</button>
+      </div>
+      <div class="span1">
+        <button type="button" name="alteraSitFrota" id="alteraSitFrota" value="{change}">{ina}tivar</button>
+      </div>
+      <input type="hidden" name="idFrota" id="idFrota" value="{idfrota}">
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div id="validateBox">
+          <span id="validateMsg"></span>
+        </div>
+      </div>
+    </div>
+
+    <fieldset id="dadosManutencao">
+
+      <legend><h4>Registros de Manutenção</h4></legend>
+
+      <div class="row">
+        <div id="gridManutencao">
+          <div class="row">
+            <div class="span6">
+              <table id="manutencao"><tr><td></td></tr></table>
+              <div id="pagerManutencao"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </fieldset>
+
+  </form>
+
+</div>
+
+<!-- DIALOG -->
+
+<!-- <div id="regManutencao"></div> -->
+
+<div class="modal hide fade" id="selEquipamento">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Instalação de Equipamento</h3>
+      </div>
+      
+      <div class="modal-body">
+      
+        <table class="table table-striped" id="tabSelEquip">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID Equipamento</th>
+              <th>KIT</th>
+              <th>ID CCO</th>
+              <th>Número Antena</th>     
+            </tr>     
+          </thead>
+          
+          <tbody></tbody>
+        </table>
+
+      </div>
+         
+      
+      <div class="modal-footer">        
+        <button class="btn btn-primary" type="button"  name="selectEquip" id="selectEquip" value="Selecionar">Selecionar</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL - CONFIRMA EXCLUSÃO EQUIPAMENTO -->
+<div class="modal hide fade" id="delEquip">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h5>Confirmar exclusão do equipamento</h5>
+      </div>
+      
+      <div class="modal-body">
+      
+       		
+			<div class="span3">
+				<label for="delEquipMotivo">Motivo</label>
+				<input type="text" id="delEquipMotivo" name="delEquipMotivo" maxlength="256"/>
+			</div>
+			<div class="span3">
+				<label for="delEquipDt">Data da Exclusão</label>
+				<input type="text" id="delEquipDt" name="delEquipDt" />
+			</div>
+		
+
+
+      </div>
+         
+      
+      <div class="modal-footer">        
+		<button class="btn btn-danger" type="button"  name="deletaEquip" id="deletaEquip" value="Excluir">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>

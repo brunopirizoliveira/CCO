@@ -1,0 +1,35 @@
+<div id="wrapper">
+	<form id="frmFornecedor"> <!-- ou  method="post" action="../controller/executa_cadastro_frota.php" não assincrono -->
+
+    <fieldset id="dadosFornecedor">
+		<legend><h4>Dados do Fornecedor</h4></legend>
+		<div class="row">
+			<div class="span4">
+				<label for="fornRazao">Razão Social</label>
+				<input type="text" id="fornRazao" name="frtEmpresa" />
+			</div>
+			<div class="span4">
+				<label for="fornCNPJ">CNPJ</label>
+				<input type="text" id="fornCNPJ" name="fornCNPJ" maxlength="14" onBlur="validarCNPJ(frmFornecedor.fornCNPJ) ;" />
+			</div>
+		</div>
+    </fieldset>
+
+    <div class="row">
+      <div class="span1">
+        <button type="button" name="salvarFornecedor" id="salvarFornecedor" value="Salvar">Salvar</button>
+      </div>
+      <input type="hidden" name="idFornecedor" value="{idFornecedor}">
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div id="validateBox">
+          <span id="validateMsg"></span>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+</div>

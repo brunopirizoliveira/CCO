@@ -1,0 +1,54 @@
+<!-- START BLOCK : _admin -->
+
+<div id="gridLog">
+	<div class="row">
+		<table class="log">
+			<tr class="grey">
+				<td colspan="4"><strong>Filtros</strong></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<form action="../controller/consulta_log.php" method="post">
+						<input type="text" id="logUsuario" name="logUsuario" placeholder="Usuario" value="{logUsuario}" />
+						<input type="text" id="logDtIni" name="logDtIni" placeholder="Data Inicial" value="{logDtIni}" />
+						a
+						<input type="text" id="logDtFim" name="logDtFim" placeholder="Data Final" value="{logDtFim}" />
+						<button type="submit" class="btn btn-mini pull-right span1">Filtrar</button>
+					</form>
+				</td>
+			</tr>
+			<tr class="grey">
+				<td><strong>Usuário</strong></td>
+				<td width="125px"><strong>Data</strong></td>
+				<td><strong>Ação</strong></td>
+				<td width="95px"><strong>Endereço</strong></td>
+				
+			</tr>
+			<!-- START BLOCK : log -->
+			<tr>
+				<td>{usuario}</td>
+				<td>{data} {datahora}</td>
+				<td>{textoLog}</td>
+				<td>{ipAdress}</td>
+			</tr>
+			<!-- END BLOCK : log -->
+			
+			<tr class="ativos-bottom">
+				<td colspan="4">
+
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</div>
+
+<!-- END BLOCK : _admin -->
+
+<!-- START BLOCK : user -->
+
+	Você não tem permissão para visualizar esta página. Consulte o administrador.
+	<br /><br />
+	<a href="../controller/mapa.php">Clique aqui para voltar à página inicial.</a>
+
+<!-- END BLOCK : user -->

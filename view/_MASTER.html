@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+	
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>CCO - TECNOLOGIAS EMBARCADAS</title>
+
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.css">
+	<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />-->
+	<link rel="stylesheet" href="../vendor/jquery-ui/jquery-ui-smoothness.css" />
+	<link href="../assets/css/default.css" rel="stylesheet" type="text/css" />
+
+	<!-- Para o jqGrid Rodar -->
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="../vendor/jqGrid/css/ui-lightness/jquery-ui-1.7.1.custom.css" /> -->
+	<link rel="stylesheet" type="text/css" media="screen" href="../vendor/jqGrid/css/ui.jqgrid.css" />
+	<!-- Para o jqGrid Rodar -->
+
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="../assets/images/logo.gif">
+		</div>
+	</header>
+
+	<nav>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="../controller/mapa.php">CCO - Tecnologias Embarcadas</a>
+				<ul class="nav nav-tabs">
+	  				<li class="dropdown">
+				    	<a class="dropdown-toggle"
+					       data-toggle="dropdown"
+					       href="#">
+					        Mapa
+					        <b class="caret"></b>
+				      	</a>
+				    	<ul class="dropdown-menu">
+				      		<li><a href="../controller/mapa.php">Ativos</a></li>							
+					  		<li><a href="../controller/inativos.php">Inativos</a></li>
+				    	</ul>
+				  	</li>
+
+					<li class="dropdown">
+				    	<a class="dropdown-toggle"
+					       data-toggle="dropdown"
+					       href="#">
+					        Cadastro
+					        <b class="caret"></b>
+				      	</a>
+				    	<ul class="dropdown-menu">
+				      		<li><a href="../controller/cadastro_frota.php">Frota</a></li>
+							<!-- <li><a href="../controller/mapa.php">Motorista</a></li> -->
+					  		<li><a href="../controller/cadastro_tecnologia.php">Tecnologia</a></li>
+					  		<!-- <li><a href="../controller/cadastro_fornecedor.php">Fornecedor</a></li> -->
+				    	</ul>
+				  	</li>
+				  	<li class="dropdown">
+				    	<a class="dropdown-toggle"
+					       data-toggle="dropdown"
+					       href="#">
+					        Consulta
+					        <b class="caret"></b>
+				      	</a>
+				    	<ul class="dropdown-menu">
+				      		<li><a href="../controller/consulta_tecnologia.php">Tecnologia</a></li>
+				    	</ul>
+				  	</li>
+					<!-- START BLOCK : admin -->
+					<li class="dropdown">
+				    	<a class="dropdown-toggle"
+					       data-toggle="dropdown"
+					       href="#">
+					        Admin
+					        <b class="caret"></b>
+				      	</a>
+				    	<ul class="dropdown-menu">
+				      		<li><a href="../controller/consulta_log.php">Consulta Log</a></li>
+							<li><a href="../controller/cadastro_usuario.php">Cadastro Usuário</a></li>
+				    	</ul>
+				  	</li>
+					<!-- END BLOCK : admin -->
+					<!-- <li class="dropdown"> -->
+					<!-- <a class="dropdown-toggle"
+						 data-toggle="dropdown"
+						 href="#">
+							Relatório
+							<b class="caret"></b>
+						</a>
+					<ul class="dropdown-menu">
+						<li><a href="../controller/mapa.php">Lista Frota</a></li>
+						<li><a href="../controller/mapa.php">Lista Motorista</a></li>
+						<li><a href="../controller/mapa.php">Lista Tecnologia</a></li>
+						<li><a href="../controller/mapa.php">Lista Fornecedores</a></li>
+					</ul> -->
+					<!-- </li> -->					
+					<li><a href="../controller/logout.php"><strong>Sair</strong></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="content">
+
+		<!-- INCLUDE BLOCK : content -->
+
+	</section>
+
+	<footer class="site-footer">
+		<div class="navbar-header">
+			<div class="nav navbar-inner-lj">
+				<div class="logo_small">
+					<img alt="Brand" src="../assets/images/logo_small.png">
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="../vendor/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="../vendor/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+	<script src="../vendor/jquery-validate/dist/jquery.validate.js" type="text/javascript"></script>
+	<script src="../vendor/jqGrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+	<script src="../vendor/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+	<script src="../assets/scripts/script.js" type="text/javascript"></script>
+	<script src="../assets/scripts/frota.js" type="text/javascript"></script>
+	<script src="../assets/scripts/validacnpj.js" type="text/javascript"></script>
+	<script src="../assets/scripts/usuario.js" type="text/javascript"></script>
+
+
+</body>
+</html>

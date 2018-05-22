@@ -1,0 +1,378 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+
+header {
+	width: auto;
+	height: 50px;
+	padding: 0px 0px 0px 40px;
+	margin: 20px 0px 10px 0px;
+}
+
+nav {
+	width: auto;
+	margin: 0 40px 10px 40px;
+	height: 100px;
+	/*padding: 0px 0px 0px 20px;*/
+  font-size: 14px;
+}
+
+section {
+	padding: 0px 0px 0px 40px;
+	width: 75%; /* MODIFICADO EM 21/12/15. VALOR ANTERIOR: 60% */
+	min-height: 500px;
+	float: left;
+  margin-right: 10px;
+}
+
+aside {
+  padding: 0px 0px 0px 10px;
+  margin-right: -300px;
+  clear: both;
+  width: 30%;
+  min-height: 500px;
+  float: right;
+}
+
+fieldset {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#novaOcorrencia {
+	margin-bottom: 10px;
+}
+
+#dadosStFrota{
+  margin-bottom: 20px;
+}
+
+#gridAtivos {
+  margin-bottom: 20px;
+}
+
+#validateBox {
+    margin-top: 15px;
+}
+
+#validateMsg {
+  color:white;
+  height: 50px;
+  font-size: 14px;
+}
+
+el.error{
+  padding: 5px;
+  background-color: red;
+}
+
+el.ok {
+  color: green;
+}
+
+.site-footer{
+	
+	position: relative;
+	height: 10px;
+	width: auto;
+	clear: both;
+	margin-top: -10px;
+}
+
+.logo_small{
+	float: right;
+	padding: 5px 75px 5px 5px;
+}
+
+#dadosManutencao {
+  margin-top: 30px;
+}
+
+#selEquipamento {
+	display: none;
+	font-size: 12px;
+}
+
+#regManutencao {
+	display: none;
+	font-size: 12px;
+}
+
+#selectEquip {
+	height: 30px;
+	margin-left: 125px;
+}
+
+#cabOcorrencia {
+	margin-bottom: 20px;
+}
+
+#selSensoresAtuadoresRow label {
+	font-size: 10px;
+}
+/* CSS PARA OS FILTROS (MAPA) */
+
+.filtros1 textarea,
+.filtros1 input[type="text"] {
+	width: 65px;
+}
+.filtros1 select {
+	width: 74px;
+}
+
+.filtros1 button {
+	margin: 27px 0 0 0;
+}
+
+.filtros2 textarea,
+.filtros2 input[type="text"] {
+	width: 140px;
+}
+.filtros2 select {
+	width: 154px;
+	height:50px;
+}
+
+.filters {
+  height: 90px;
+  width: 1120px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.well_filtros {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	padding: 2px;
+	min-height: 24px;
+	max-height: 60px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	overflow: auto;
+	-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+			border-radius: 4px;
+}
+
+.well_1 {
+	width: 74px;
+}
+
+.well_2 {
+	width: 154px;
+}
+
+/* FIM FILTROS (MAPA) */
+
+.ativos {
+    border-collapse: collapse;
+	table-layout: auto;
+	width: 1260px;
+}
+
+.equip {
+	border-collapse: collapse;
+	table-layout: auto;
+	width: 940px;
+}
+
+.log {
+	border-collapse: collapse;
+	table-layout: auto;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 12px;
+	margin-bottom: 50px;
+}
+
+.log input[type="text"]{
+	width: 100px;
+	height: 10px;
+	font-size: 12px;
+	border-radius: 0px;
+	margin: 0;
+}
+
+.log form{
+	margin: 0;
+}
+
+#logUsuario {
+	margin-right: 130px;
+}
+
+.ativos input[type="number"]{
+	margin-top: 6px;
+	padding: 1px;
+	height: 20px;
+	width: auto;
+	font-size: 11px;
+}
+
+.ativos form {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+
+.equip-head td,
+.ativos-head td {
+	-webkit-border-top-right-radius: 4px;
+	 -webkit-border-top-left-radius: 4px;
+        -moz-border-radius-topright: 4px;
+         -moz-border-radius-topleft: 4px;
+            border-top-right-radius: 4px;
+             border-top-left-radius: 4px;
+}
+
+.ativos-body td:first-child th {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+
+
+.equip td, .equip th,
+.ativos td, .ativos th {
+	text-align: center;
+    border: 1px solid #cccccc;
+	border-top: 0;
+	padding: 10px 3px;
+	line-height: 16px;
+}
+
+.log td, .log th {
+	text-align: left;
+	border: 1px solid #cccccc;
+	border-top: 0;
+	padding: 5px 3px;
+	line-height: 10px;
+}
+
+.equip tr:hover,
+.ativos tr:hover {
+	background: #d9d9d9;
+}
+
+.equip tr:first-child th,
+.log tr:first-child th,
+.ativos tr:first-child th {
+    border-top: 0;
+	border-left: 0;
+	
+}
+
+.equip tr:last-child td,
+.log tr:last-child td,
+.ativos tr:last-child td {
+    border-bottom: 0;
+}
+
+.equip tr td:first-child,
+.equip tr th:first-child,
+.log tr td:first-child,
+.log tr th:first-child,
+.ativos tr td:first-child,
+.ativos tr th:first-child {
+    border-left: 0;
+}
+
+.equip tr td:last-child,
+.equip tr th:last-child,
+.log tr td:last-child,
+.log tr th:last-child,
+.ativos tr td:last-child,
+.ativos tr th:last-child {
+    border-right: 0;
+}
+
+.equip-bottom td,
+.ativos-bottom td{
+	padding: 3px;
+	background-color: #e6e6e6;
+	-webkit-border-bottom-right-radius: 4px;
+     -webkit-border-bottom-left-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
+         -moz-border-radius-bottomleft: 4px;
+            border-bottom-right-radius: 4px;
+             border-bottom-left-radius: 4px;
+}
+
+.grey td {
+	padding: 3px;
+	background-color: #e6e6e6;
+	border-bottom: 1px solid #cccccc;
+}
+
+.orange td {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: left;
+  color: white;
+  border-bottom: 1px solid #ff9900;
+  background: #f6a828 url("../../vendor/jquery-ui/images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
+}
+
+.ativos-right{
+	float: right;
+}
+
+.situacao-ativo, .situacao-inativo {
+	width: 127px;
+	height: 10px;
+	margin: 6px 0 0 1.25px;
+	border-radius: 10px;
+}
+
+.situacao-ativo{
+	background-color: #00ff00;
+}
+
+.situacao-inativo{
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

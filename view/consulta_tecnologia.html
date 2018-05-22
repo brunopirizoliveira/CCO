@@ -1,0 +1,108 @@
+<!-- Filtros -->
+<div class="container">
+	<div class="row">
+		<div class="filters">
+			<form id="filtro" action="consulta_tecnologia.php" method="post">
+				<div class="span3">
+					<div class="filtros1">
+						<label for="frota">Frota</label> <!-- PREFIXO HS_CT_FROTA -->
+						<input type="text" id="frota" name="frota" placeholder="0001234"></input>
+					</div>
+				</div>
+				
+				<div class="span3">
+					<div class="filtros1">
+						<label for="idEquip">ID Equipamento</label> <!-- PREFIXO HS_CT_FROTA -->
+						<input type="text" id="idEquip" name="idEquip" placeholder="HSZZ00"></input>
+					</div>
+				</div>
+
+				<div class="span3">
+					<div class="filtros1">
+						<label for="modelo">Modelo</label> <!-- PREFIXO HS_CT_FROTA -->
+						<input type="text" id="modelo" name="modelo" placeholder="KIT-0000"></input>
+					</div>
+				</div>
+
+				<div class="span3">
+					<div class="filtros1">
+						<input type="submit" id="btnfiltro" name="btnfiltro" class="btn btn-small btn-default" value="Buscar"><br/>
+						<input type="submit" id="btnrelatorio" name="btnrelatorio" class="btn btn-small btn-default" value="Gerar Relatorio"></input>
+						<!-- <button type="button" id="btnfiltro" name="btnfiltro">Buscar</button> -->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Grid -->
+<div id="gridAtivos">
+	<div class="row">
+		<table class="span ativos">
+			<tr class="ativos-head orange">
+				<td colspan="15"><strong>Equipamentos cadastrados</strong></td>
+			</tr>
+			
+			<tr class="grey">
+				<td><span class="glyphicon glyphicon-cog glyphicon-big"></span></td>
+				
+				<td>ID Equipamento</td>
+				<td>Modelo</td>
+				<td>Tipo</td>
+				<td>Fornecedor</td>
+				<td>Medição</td>
+				<td>Prefixo</td>
+				<td>Placa</td>
+				<td>Marca</td>
+				<td>Operação</td>
+				<td>Filial</td>
+				<td>Data de Instalação</td>
+				<td>Tipo Frota</td>
+				<td>Situação</td>
+				
+			</tr>
+			<!-- START BLOCK : tech -->
+			<tr>
+				<td><a href="../controller/editar_tecnologia.php?idTecnologia={idTecnologia}"><span class="glyphicon glyphicon-cog glyphicon-big"></span></a></td>
+				<!-- ../controller/editar_equipamento.php?idTecnologia={idTecnologia} -->
+				
+				<td>{idcco}</td>
+				<td>{modelo}</td>
+				<td>{tipo}</td>
+				<td>{fornecedor}</td>
+				<td>{medicao}</td>
+				<td>{prefixo}</td>
+				<td>{placa}</td>
+				<td>{marca}</td>
+				<td>{operacao}</td>
+				<td>{filial}</td>
+				<td>{dtInstalacao}</td>
+				<td>{tpFrota}</td>
+				<td>{situacao}</td>
+			</tr>
+			<!-- END BLOCK : tech -->
+			<tr class="ativos-bottom">
+				<td colspan="15">
+					<!-- START BLOCK : start -->
+						<a href="../controller/consulta_tecnologia.php?pag=1"><span class="glyphicon glyphicon-step-backward"></span></a>
+					<!-- END BLOCK : start -->
+					<!-- START BLOCK : back -->
+						<a href="../controller/consulta_tecnologia.php?pag={menos}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<!-- END BLOCK : back -->
+					<form action="../controller/consulta_tecnologia.php" method="get" class="ativos">
+						Página <input type="number" name="pag" id="pag" placeholder="{pag}" min="1" step="1" max="{pgs}"></input> de {pgs}
+					</form>
+					<!-- START BLOCK : forward -->
+						<a href="../controller/consulta_tecnologia.php?pag={mais}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					<!-- END BLOCK : forward -->
+					<!-- START BLOCK : end -->
+						<a href="../controller/consulta_tecnologia.php?pag={pgs}"><span class="glyphicon glyphicon-step-forward"></span></a>
+					<!-- END BLOCK : end -->
+					<p class="ativos-right">{mostrador}</p>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</div>

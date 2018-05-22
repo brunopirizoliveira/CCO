@@ -1,0 +1,144 @@
+<div id="wrapper">
+	<form id="frmTecno"> <!-- ou  method="post" action="../controller/executa_cadastro_tecno.php" não assincrono -->
+
+		<fieldset id="dadosTecno">
+			<legend><h4>Dados Tecnologia</h4></legend>
+			<div class="row">
+				<div class="span3">
+					<label for="tecIdent"><h5>Identificação</h5></label>
+					<table>
+						<tr>
+							<td colspan="2"><input type="text" name="idcco" id="idcco" placeholder="ID Equipamento" required></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="text" name="modelo" id="modelo" placeholder="Modelo do Equipamento" required></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="text" name="serial" id="serial" placeholder="Nº Serial"></td>
+						</tr>
+						<!-- START BLOCK : tipo -->
+
+						<tr>
+							<td><input type="radio" id="tipo" name="tipo" value="{idtp}" {idtipo} required></td>
+							<td>{tipoE}</td>
+						</tr>
+						<!-- END BLOCK : tipo -->
+						<!--<tr>
+							<td><input type="checkbox" name="identificacao[]" id="identificacao" value="chave_motorista"></td>
+							<td>Chave Motorista</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="identificacao[]" id="identificacao" value="cartao_vectio"></td>
+							<td>Cartão VECTIO Viagem</td>
+						</tr>-->
+					</table>
+				</div>
+				<div class="span3">
+					<label for="tecSensores"><h5>Sensores</h5></label>
+					<table>
+						<!-- START BLOCK : sensores -->
+						<tr>
+							<td><input type="checkbox" id="sensor" name="sensor[]" value="{idt}"></td>
+							<td>{tecnologia}</td>
+						</tr>
+						<!-- END BLOCK : sensores -->
+					</table>
+				</div>
+				<div class="span3">
+					<label for="tecAtuadores"><h5>Atuadores</h5></label>
+					<table>
+						<!-- START BLOCK : atuadores -->
+						<tr>
+							<td><input type="checkbox" id="atuador" name="atuador[]" value="{idt}"></td>
+							<td>{tecnologia}</td>
+						</tr>
+						<!-- END BLOCK : atuadores -->
+					</table>
+				</div>
+				<div class="span3">
+					<label for="tecComunicacao"><h5>Comunicação</h5></label>
+					<table>
+						<!-- START BLOCK : comunicacao -->
+						<tr>
+							<td><input type="checkbox" id="comunicacao" name="comunicacao[]" value="{idt}"></td>
+							<td>{tecnologia}</td>
+						</tr>
+						<!-- END BLOCK : comunicacao -->
+					</table>
+				</div>
+				
+			</div>
+
+			<div class="row">
+				<div class="span3">
+					<label for="tecSinal"><h5>Sinal</h5></label>
+					<table>
+						<tr>
+							<td colspan="2">
+								<input type="text" name="codigo_antena" id="codigo_antena" placeholder="Código da Antena" >
+							</td>
+						</tr>
+						<!-- START BLOCK : sinal -->
+						<tr>
+							<td>
+								<input type="checkbox" id="sinal" name="sinal[]" value="{idt}">
+							</td>
+							<td>{tecnologia}</td>
+						</tr>
+						<!-- END BLOCK : sinal -->
+					</table>
+				</div>
+				<div class="span3">
+					<label for="tecForn"><h5>Fornecedor</h5></label>
+					<table>
+						<!-- START BLOCK : fornecedor -->
+						<tr>
+							<td><input type="radio" id="fornecedor" name="fornecedor" value="{idf}" required></td>
+							<td>{fornecedor}</td>
+						</tr>
+						<!-- END BLOCK : fornecedor -->
+					</table>
+				</div>
+				<div class="span3">
+					<label for="tecMedicoes"><h5>Medições</h5></label>
+					<table>
+						<!-- START BLOCK : medicoes -->
+						<tr>
+							<td><input type="radio" id="medicao" name="medicao" value="{idm}" required></td>
+							<td>{medicao}</td>
+						</tr>
+						<!-- END BLOCK : medicoes -->
+					</table>
+				</div>
+				<div class="span3">
+					<label for="tecAvisos"><h5>Avisos</h5></label>
+					<table>
+						<!-- START BLOCK : avisos -->
+						<tr>
+							<td><input type="checkbox" id="avisos" name="avisos[]" value="{idt}"></td>
+							<td>{tecnologia}</td>
+						</tr>
+						<!-- END BLOCK : avisos -->
+					</table>
+				</div>
+			</div>
+		</fieldset>
+
+		<div class="row">
+			<div class="span3">
+				<button type="button" name="salvarTecnologia" id="salvarTecnologia" value="Salvar">Cadastrar Tecnologia</button>
+			</div>
+			<input type="hidden" name="idTecno" value="{idTecno}">
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div id="validateBox">
+					<span id="validateMsg"></span>
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+</div>

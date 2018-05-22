@@ -1,0 +1,138 @@
+<!-- Filtros -->
+<div class="container">
+	<div class="row">
+		<div class="filters">
+			<form id="filtro" action="mapa.php" method="post">
+				<div class="span2">
+					<div class="filtros1">
+						<label for="frota">Frota</label> <!-- PREFIXO HS_CT_FROTA -->
+						<input type="text" id="frota" name="frota" placeholder="0001234"></input>
+					</div>
+				</div>
+				
+				<div class="span2">
+					<div class="filtros1">
+						<label for="placa">Placa</label> <!-- PLACA HS_CT_FROTA -->
+						<input type="text" id="placa" name="placa" placeholder="ABC-1234"></input>
+					</div>
+				</div>
+				
+				<div class="span2">
+					<div class="filtros1">
+						<label for="filial">Filial</label> <!-- FILIAL HS_CT_FROTA -->
+						<div class="well_filtros well_1">
+							<!-- START BLOCK : filial -->
+							<input type="checkbox" id="filial" name="filial[]" value="{filial}">{filial}</input><br />
+							<!-- START BLOCK : filial -->
+						</div>
+					</div>
+				</div>
+
+				<div class="span3">
+					<div class="filtros2">
+						<label for="operacao">Operação</label> <!-- OPERACAO HS_CT_FROTA -->
+						<div class="well_filtros well_2">
+							<!-- START BLOCK : operacao -->
+							<input type="checkbox" id="operacao" name="operacao[]" value="{operacao}">{operacao}</input><br />
+							<!-- END BLOCK : operacao -->
+						</div>
+					</div>
+				</div>
+				
+				<div class="span3">
+					<div class="filtros2">
+						<label for="tpFrota">Tipo de Frota</label> <!-- TIPO HS_CT_FROTA -->
+						<div class="well_filtros well_2">
+							<!-- START BLOCK : tipo -->
+							<input type="checkbox" id="tpFrota" name="tpFrota[]" value="{tipo}">{tipo}</input><br />
+							<!-- START BLOCK : tipo -->
+						</div>
+					</div>
+				</div>
+				
+				<div class="span2">
+					<div class="filtros1">
+						<input type="submit" id="btnfiltro" name="btnfiltro" class="btn btn-small btn-default" value="Buscar">
+						<input type="submit" id="btnrelatorio" name="btnrelatorio" class="btn btn-small btn-default" value="Gerar Relatorio"></input>
+						<!-- <button type="button" id="btnfiltro" name="btnfiltro">Buscar</button> -->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Grid -->
+<div id="gridAtivos">
+	<div class="row">
+		<table class="span ativos">
+			<tr class="ativos-head orange">
+				<td colspan="15"><strong>Frotas Ativos</strong></td>
+			</tr>
+			
+			<tr class="grey">
+				<td><span class="glyphicon glyphicon-cog glyphicon-big"></span></td>
+				
+				<td>Frota</td>
+				<td>Placa</td>
+				<td>Operação</td>
+				<td>Filial</td>
+				<td>Tipo</td>
+				<td>Rastreador</td>
+				<td>Nº Antena Rastreador</td>
+				<td>Telemetria</td>
+				<td>Nº Antena Telemetria</td>
+				<td>Comunicação</td>
+				<td>Tem Contrato</td>
+				<!-- <td>Status Rastreador</td>
+				<td>St Manut Rastreador</td>
+				<td>Status Telemetria</td>
+				<td>St Manut Telemetria</td> -->
+				
+			</tr>
+			<!-- START BLOCK : mapa -->
+			<tr>
+				<td><a href="../controller/editar_frota.php?frota={idfrota}"><span class="glyphicon glyphicon-cog glyphicon-big"></span></a></td>
+				
+				<td>{frota}</td>
+				<td>{placa}</td>
+				<td>{operacao}</td>
+				<td>{filial}</td>
+				<td>{tpFrota}</td>
+				<td>{rastreador}</td>
+				<td>{numAntenaRas}</td>
+				<td>{telemetria}</td>
+				<td>{numAntenaTel}</td>
+				<td>{comunicacao}</td>
+				<td>{temContrato}</td>
+				<!-- <td>{stRastreador}</td>
+				<td>{stManutRastreador}</td>
+				<td>{stTelemetria}</td>
+				<td>{stManutTelemetria}</td> -->
+			</tr>
+			<!-- END BLOCK : mapa -->
+			<tr class="ativos-bottom">
+				<td colspan="15">
+					<!-- START BLOCK : start -->
+						<a href="../controller/mapa.php?pag=1"><span class="glyphicon glyphicon-step-backward"></span></a>
+					<!-- END BLOCK : start -->
+					<!-- START BLOCK : back -->
+						<a href="../controller/mapa.php?pag={menos}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<!-- END BLOCK : back -->
+					<form action="../controller/mapa.php" method="get" class="ativos">
+						Página <input type="number" name="pag" id="pag" placeholder="{pag}" min="1" step="1" max="{pgs}"></input> de {pgs}
+					</form>
+					<!-- START BLOCK : forward -->
+						<a href="../controller/mapa.php?pag={mais}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					<!-- END BLOCK : forward -->
+					<!-- START BLOCK : end -->
+						<a href="../controller/mapa.php?pag={pgs}"><span class="glyphicon glyphicon-step-forward"></span></a>
+					<!-- END BLOCK : end -->
+					<p class="ativos-right">{mostrador}</p>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</div>
+

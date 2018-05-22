@@ -1,0 +1,379 @@
+<aside>
+	<!-- INCLUDE BLOCK : aside -->
+</aside> 
+
+<div id="wrapper">
+
+  <form id="frmFrota"> 
+
+    <fieldset id="dadosFrota">
+      <legend><h4>Dados do Frota</h4></legend>
+      <div class="row">
+        <div class="span3">
+          <label for="frtPrefixo">Frota</label>
+          <input type="text" id="frtPrefixo" name="frtPrefixo" />
+        </div>
+        <div class="span3">
+          <label for="frtEmpresa">Empresa</label>
+          <input type="text" id="frtEmpresa" name="frtEmpresa" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtFilial">Filial</label>
+          <input type="text" id="frtFilial" name="frtFilial" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtGaragem">Garagem</label>
+          <input type="text" id="frtGaragem" name="frtGaragem" readonly />
+        </div>
+      </div>
+
+      <div class="row">  
+        <div class="span3">
+          <label for="frtMarca">Marca</label>
+          <input type="text" id="frtMarca" name="frtMarca" readonly />
+        </div>
+
+        <div class="span3">
+          <label for="frtOperacao">Operacao</label>
+          <input type="text" id="frtOperacao" name="frtOperacao" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtPlaca">Placa</label>
+          <input type="text" id="frtPlaca" name="frtPlaca" readonly />
+        </div>
+        <div class="span3">
+          <label for="frtTipo">Tipo</label>
+          <input type="text" id="frtTipo" name="frtTipo" readonly />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset id="dadosEquipamento">
+      <legend><h4>Dados Equipamento </h4></legend> 
+	    <input type="hidden" id="targetEquip" name="targetEquip">
+
+    <div class="row">
+	  
+		<div class="span12">
+			<div class="btn-group pull-right" role="group" aria-label="...">
+				<button type="button" class="btn btn-mini btn-default" id="add_equip"><span class="glyphicon glyphicon-plus"></span></button>
+				<button type="button" class="btn btn-mini btn-default" id="rem_equip"><span class="glyphicon glyphicon-minus"></span></button>
+			</div>
+		</div>
+	  
+	  </div>
+	  
+      <div class="row" id="linEquip1">
+
+        <div class="span3">
+          <label for="frtMediEquipamento1">Medição</label>
+          <select name="frtMediEquipamento1" id="frtMediEquipamento1">
+            <option value="">Selecione</option>
+            <option value="1">Telemetria</option>
+            <option value="2">Rastreador</option>
+            <option value="3">Ambos</option>
+          </select>
+        </div>
+
+        <div class="span3">
+          <label for="frtFornEquipamento1">Fornecedor</label>          
+          <select name="frtFornEquipamento1" id="frtFornEquipamento1">
+            <option value="">Selecione</option>
+            <option value="1">FM300</option>
+            <option value="2">Sascar</option>
+            <option value="3">Seva</option>
+            <option value="4">Sighra</option>
+            <option value="5">Telemetrik</option>
+          </select>
+        </div>     
+
+        <div class="span3">
+          <label for="frtSelEquipamento1">Selecione o Equipamento</label>                    
+            <input type="text" placeholder="Selecione o equipamento" id="frtSelEquipamento1" name="frtSelEquipamento1" />            
+            <input type="hidden" name="frtEquipIDTecnologia1" id="frtEquipIDTecnologia1" value="">            
+        </div>
+
+        <div class="span3">
+          <label for="frtDtEquipamento1">Data de Instalação</label>
+          <input type="text" name="frtDtEquipamento1" id="frtDtEquipamento1" />
+        </div>        
+	  </div>
+
+    <div class="row" id="linEquip2">
+
+        <div class="span3">
+          <label for="frtMediEquipamento2">Medição</label>
+          <select name="frtMediEquipamento2" id="frtMediEquipamento2">
+            <option value="">Selecione</option>
+            <option value="1">Telemetria</option>
+            <option value="2">Rastreador</option>
+            <option value="3">Ambos</option>
+          </select>
+        </div>
+
+        <div class="span3">
+          <label for="frtFornEquipamento2">Fornecedor</label>          
+          <select name="frtFornEquipamento2" id="frtFornEquipamento2">
+            <option value="">Selecione</option>
+            <option value="1">FM300</option>
+            <option value="2">Sascar</option>
+            <option value="3">Seva</option>
+            <option value="4">Sighra</option>
+            <option value="5">Telemetrik</option>
+          </select>
+        </div>     
+
+        <div class="span3">
+          <label for="frtSelEquipamento2">Selecione o Equipamento</label>                    
+            <input type="text" placeholder="Selecione o equipamento" id="frtSelEquipamento2" name="frtSelEquipamento2" />            
+            <input type="hidden" name="frtEquipIDTecnologia2" id="frtEquipIDTecnologia2" value="">            
+        </div>
+
+        <div class="span3">
+          <label for="frtDtEquipamento2">Data de Instalação</label>
+          <input type="text" name="frtDtEquipamento2" id="frtDtEquipamento2" />
+        </div>        
+    </div>
+
+    <div class="row" id="linEquip3">
+
+        <div class="span3">
+          <label for="frtMediEquipamento3">Medição</label>
+          <select name="frtMediEquipamento3" id="frtMediEquipamento3">
+            <option value="">Selecione</option>
+            <option value="1">Telemetria</option>
+            <option value="2">Rastreador</option>
+            <option value="3">Ambos</option>
+          </select>
+        </div>
+
+        <div class="span3">
+          <label for="frtFornEquipamento3">Fornecedor</label>          
+          <select name="frtFornEquipamento3" id="frtFornEquipamento3">
+            <option value="">Selecione</option>
+            <option value="1">FM300</option>
+            <option value="2">Sascar</option>
+            <option value="3">Seva</option>
+            <option value="4">Sighra</option>
+            <option value="5">Telemetrik</option>
+          </select>
+        </div>     
+
+        <div class="span3">
+          <label for="frtSelEquipamento3">Selecione o Equipamento</label>                    
+            <input type="text" placeholder="Selecione o equipamento" id="frtSelEquipamento3" name="frtSelEquipamento3" />            
+            <input type="hidden" name="frtEquipIDTecnologia3" id="frtEquipIDTecnologia3" value="">            
+        </div>
+
+        <div class="span3">
+          <label for="frtDtEquipamento3">Data de Instalação</label>
+          <input type="text" name="frtDtEquipamento3" id="frtDtEquipamento3" />
+        </div>        
+    </div>
+
+    </fieldset>
+
+    <fieldset id="dadosContrato">
+      <legend><h4>Dados de Acesso</h4></legend>
+      <!-- <legend><h4>Dados de Acesso / Contrato</h4></legend> -->
+      <div class="row">
+        <div class="span3">
+          <label for="frtProprietario">Proprietario</label>
+          <input type="text" name="frtProprietario" id="frtProprietario" />
+        </div>
+        <div class="span3">
+          <label for="frtLogin">Login</label>
+          <input type="text" name="frtLogin" id="frtLogin" />
+        </div>
+        <div class="span3">
+          <label for="frtSenha">Senha</label>
+          <input type="text" name="frtSenha" id="frtSenha" />
+        </div>
+        <div class="span3">
+          <label for="temContrato">Comodato</label>
+          <td><input type="radio" id="temContrato" name="temContrato" value="S" required>S</td>
+          <td><input type="radio" id="temContrato" name="temContrato" value="N" required>N</td>
+        </div>
+        <!-- <div class="span3">
+          <label for="frtContrComodato">Contrato Comodato</label>
+          <input type="file" name="frtContrComodato" id="frtContrComodato" />
+        </div> -->
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <div class="span1">
+        <button type="button" name="salvarFrota" id="salvarFrota" value="Salvar">Salvar</button>
+      </div>
+      
+      <input type="hidden" name="idFrota" value="{idFrota}">
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div id="validateBox">
+          <span id="validateMsg"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <fieldset id="dadosManutencao">
+
+      <button type="button" name="novaOcorrencia" id="novaOcorrencia" value="Nova Ocorrência">Nova Ocorrência</button>
+      <select id="selEquipOcorrencia">
+        <option val="">Selecione o equipamento</option>
+        <option val="teste">Teste</option>
+      </select>
+
+      <legend><h4>Registros de Manutenção</h4></legend>
+
+      <div class="row">
+        <div id="gridManutencao">
+          <div class="row">
+            <div class="span6">
+              <table id="manutencao"><tr><td></td></tr></table>
+              <div id="pagerManutencao"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+
+  </form>
+
+</div>
+
+<!-- DIALOG REGISTRO DE MANUTENÇÃO-->
+
+<div class="modal hide fade" id="regManutencao">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>        
+
+        <legend><h3>Registros de Ocorrência</h3></legend>
+      </div>
+      
+      <div class="modal-body" id="cabOcorrencia">
+        <div class="row">
+          <div class="span2">
+            <label for="ide"><strong>IDE</strong></label>          
+            05181
+          </div>
+          <div class="span2">
+            <label for="frt"><strong>Frota</strong></label>          
+            0000748
+          </div>
+          <div class="span2">
+            <label for="dtAbertura"><strong>Data de Abertura</strong></label>          
+            21/01/2016
+          </div>
+        </div>        
+
+        
+        <legend><h4>Sensores/Atuadores</h4></legend>
+
+        <!-- selSensoresAtuadoresRow -->
+        <div id="tabs-itens">
+          <ul>
+            <li><a href="#tabs-sensores">Sensor</a></li>
+            <li><a href="#tabs-atuadores">Atuador</a></li>
+            <li><a href="#tabs-sinal">Sinal</a></li>
+            <li><a href="#tabs-comunicacao">Comunicação</a></li>
+            <li><a href="#tabs-avisos">Aviso</a></li>            
+          </ul>
+          <div id="tabs-sensores"></div>
+          <div id="tabs-atuadores"></div>
+          <div id="tabs-sinal"></div>
+          <div id="tabs-comunicacao"></div>
+          <div id="tabs-avisos"></div>
+        </div>
+
+        <legend><h4>Ordem de Serviço</h4></legend>
+
+        <div id="os">
+          <div class="row">
+            <div class="span2">
+              Número: <input type="text" id="numOs" name="numOs" class="span2" />
+            </div>
+            <div class="span2">
+              Status: <select id="statusOs" name="statusOs" class="span2">
+                <option value=""></option>
+                <option value="aberta">Aberta</option>
+                <option value="fechada">Fechada</option>
+              </select>
+            </div>                        
+            <div class="span2">
+              Data de Abertura: <input type="date" id="dtAberturaOs" name="dtAberturaOs" class="span2" />
+            </div>
+          </div>      
+
+          <div class="row">                       
+            <div class="span2">
+              Conclusão: <input type="date" id="conclusaoOs" name="conclusaoOs" class="span2" />
+            </div>
+            <div class="span2">
+              Data de Agendamento: <input type="date" id="dtAgendamentoOS" name="dtAgendamentoOS" class="span2" />
+            </div>
+          </div>
+          
+        </div>
+
+        <div id="tabs-acompanhamento">
+          <ul>
+            <li><a href="#tabs-comentarios">Comentários</a></li>
+            <li><a href="#tabs-anexos">Anexos</a></li>
+          </ul>
+          <div id="tabs-comentarios"></div>
+          <div id="tabs-anexos"></div>
+        </div>
+
+      </div>
+         
+      
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+        <button class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal hide fade" id="selEquipamento">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Instalação de Equipamento</h3>
+      </div>
+      
+      <div class="modal-body">
+      
+        <table class="table table-striped" id="tabSelEquip">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID Equipamento</th>
+              <!-- <th>KIT</th> -->
+              <th>ID CCO</th>
+              <th>Número Antena</th>     
+            </tr>     
+          </thead>
+          
+          <tbody></tbody>
+        </table>
+
+      </div>         
+      
+      <div class="modal-footer">        
+        <button class="btn btn-primary" type="button"  name="selectEquip" id="selectEquip" value="Selecionar">Selecionar</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
